@@ -23,7 +23,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `comment_id` (`comment_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_comments`;
 
@@ -53,7 +53,7 @@ CREATE TABLE
         KEY `comment_date_gmt` (`comment_date_gmt`),
         KEY `comment_parent` (`comment_parent`),
         KEY `comment_author_email` (`comment_author_email`(10))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -98,7 +98,7 @@ CREATE TABLE
         `link_rss` varchar(255) NOT NULL DEFAULT '',
         PRIMARY KEY (`link_id`),
         KEY `link_visible` (`link_visible`)
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_options`;
 
@@ -111,7 +111,7 @@ CREATE TABLE
         PRIMARY KEY (`option_id`),
         UNIQUE KEY `option_name` (`option_name`),
         KEY `autoload` (`autoload`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 369 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 369 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -1592,7 +1592,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `post_id` (`post_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 425 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 425 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -2782,7 +2782,7 @@ CREATE TABLE
         ),
         KEY `post_parent` (`post_parent`),
         KEY `post_author` (`post_author`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 68 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 68 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4676,7 +4676,7 @@ CREATE TABLE
             `term_taxonomy_id`
         ),
         KEY `term_taxonomy_id` (`term_taxonomy_id`)
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4735,7 +4735,7 @@ CREATE TABLE
         PRIMARY KEY (`term_taxonomy_id`),
         UNIQUE KEY `term_id_taxonomy` (`term_id`, `taxonomy`),
         KEY `taxonomy` (`taxonomy`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4829,7 +4829,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `term_id` (`term_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_terms`;
 
@@ -4842,7 +4842,7 @@ CREATE TABLE
         PRIMARY KEY (`term_id`),
         KEY `slug` (`slug`(191)),
         KEY `name` (`name`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4950,7 +4950,7 @@ CREATE TABLE
         PRIMARY KEY (`umeta_id`),
         KEY `user_id` (`user_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 23 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 23 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_520_ci;
 
 START TRANSACTION;
 
