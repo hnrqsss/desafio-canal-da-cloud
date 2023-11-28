@@ -4,9 +4,9 @@
 
 --
 
--- Host: localhost
+-- Host: cloudbooks.cj8ugeg0i7v7.us-east-1.rds.amazonaws.com
 
--- Database: cloudbooks-db
+-- Database: cloudbooks
 
 -- Class: Ai1wm_Database_Mysqli
 
