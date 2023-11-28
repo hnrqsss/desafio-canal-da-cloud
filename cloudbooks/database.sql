@@ -4,9 +4,9 @@
 
 --
 
--- Host: cloudbooks.cj8ugeg0i7v7.us-east-1.rds.amazonaws.com
+-- Host: localhost
 
--- Database: cloudbooks
+-- Database: cloudbooks-db
 
 -- Class: Ai1wm_Database_Mysqli
 
@@ -23,7 +23,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `comment_id` (`comment_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_comments`;
 
@@ -53,7 +53,7 @@ CREATE TABLE
         KEY `comment_date_gmt` (`comment_date_gmt`),
         KEY `comment_parent` (`comment_parent`),
         KEY `comment_author_email` (`comment_author_email`(10))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -98,7 +98,7 @@ CREATE TABLE
         `link_rss` varchar(255) NOT NULL DEFAULT '',
         PRIMARY KEY (`link_id`),
         KEY `link_visible` (`link_visible`)
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_options`;
 
@@ -111,7 +111,7 @@ CREATE TABLE
         PRIMARY KEY (`option_id`),
         UNIQUE KEY `option_name` (`option_name`),
         KEY `autoload` (`autoload`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 369 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 369 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -120,7 +120,7 @@ INSERT INTO
 VALUES (
         1,
         'siteurl',
-        'http://cloudbooks.store',
+        'http://cloudbooks.onlab.click',
         'yes'
     );
 
@@ -129,7 +129,7 @@ INSERT INTO
 VALUES (
         2,
         'home',
-        'http://cloudbooks.store',
+        'http://cloudbooks.onlab.click',
         'yes'
     );
 
@@ -714,7 +714,7 @@ INSERT INTO
 VALUES (
         77,
         'widget_text',
-        'a:4:{i:1;a:2:{s:5:\"title\";s:0:\"\";s:4:\"text\";s:1407:\"<a href=\"#\" class=\"logo\"><img src=\"http://cloudbooks.store/wp-content/plugins/ecommerce-companion/inc/themes/retailsy/assets/images/footerlogo.png\"></a>\r\n                            <div class=\"textwidget\">\r\n                                <p class=\"about-template\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt\r\n                                    quas recusandae\r\n                                    explicabo\r\n                                    voluptatibus dolor esse voluptates,.</p>\r\n                                <aside class=\"widget widget_social_widget\">\r\n                                    <ul>\r\n                                        <li><a href=\"#\" class=\"active\"><i class=\"fa fa-facebook\"></i><i class=\"fa fa-facebook\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i><i class=\"fa fa-twitter\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-instagram\"></i><i class=\"fa fa-instagram\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i><i class=\"fa fa-linkedin\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i><i class=\"fa fa-google-plus\"></i></a></li>\r\n                                    </ul>\r\n                                </aside>\r\n                            </div>\";}i:2;a:1:{s:5:\"title\";s:12:\"Recent Posts\";}i:3;a:1:{s:5:\"title\";s:10:\"Categories\";}s:12:\"_multiwidget\";i:1;}',
+        'a:4:{i:1;a:2:{s:5:\"title\";s:0:\"\";s:4:\"text\";s:1407:\"<a href=\"#\" class=\"logo\"><img src=\"http://cloudbooks.onlab.click/wp-content/plugins/ecommerce-companion/inc/themes/retailsy/assets/images/footerlogo.png\"></a>\r\n                            <div class=\"textwidget\">\r\n                                <p class=\"about-template\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt\r\n                                    quas recusandae\r\n                                    explicabo\r\n                                    voluptatibus dolor esse voluptates,.</p>\r\n                                <aside class=\"widget widget_social_widget\">\r\n                                    <ul>\r\n                                        <li><a href=\"#\" class=\"active\"><i class=\"fa fa-facebook\"></i><i class=\"fa fa-facebook\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i><i class=\"fa fa-twitter\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-instagram\"></i><i class=\"fa fa-instagram\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i><i class=\"fa fa-linkedin\"></i></a></li>\r\n                                        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i><i class=\"fa fa-google-plus\"></i></a></li>\r\n                                    </ul>\r\n                                </aside>\r\n                            </div>\";}i:2;a:1:{s:5:\"title\";s:12:\"Recent Posts\";}i:3;a:1:{s:5:\"title\";s:10:\"Categories\";}s:12:\"_multiwidget\";i:1;}',
         'yes'
     );
 
@@ -1206,7 +1206,7 @@ INSERT INTO
 VALUES (
         173,
         'fs_accounts',
-        'a:5:{s:21:\"id_slug_type_path_map\";a:1:{i:8841;a:3:{s:4:\"slug\";s:16:\"wp-books-gallery\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:37:\"wp-books-gallery/wp-books-gallery.php\";}}s:11:\"plugin_data\";a:1:{s:16:\"wp-books-gallery\";a:16:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:37:\"wp-books-gallery/wp-books-gallery.php\";}s:20:\"is_network_activated\";b:0;s:17:\"install_timestamp\";i:1698107792;s:17:\"was_plugin_loaded\";b:1;s:21:\"is_plugin_new_install\";b:1;s:16:\"sdk_last_version\";N;s:11:\"sdk_version\";s:6:\"2.5.12\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";N;s:14:\"plugin_version\";s:5:\"4.5.8\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";N;s:4:\"host\";s:22:\"cloudbooks.tore\";s:9:\"server_ip\";s:10:\"10.0.1.138\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1698107792;s:7:\"version\";s:5:\"4.5.8\";}s:15:\"prev_is_premium\";b:0;s:12:\"is_anonymous\";a:3:{s:2:\"is\";b:1;s:9:\"timestamp\";i:1698107800;s:7:\"version\";s:5:\"4.5.8\";}}}s:13:\"file_slug_map\";a:1:{s:37:\"wp-books-gallery/wp-books-gallery.php\";s:16:\"wp-books-gallery\";}s:7:\"plugins\";a:1:{s:16:\"wp-books-gallery\";O:9:\"FS_Plugin\":24:{s:2:\"id\";s:4:\"8841\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:0;s:10:\"public_key\";s:32:\"pk_0a8ec2eb28cd4919f2bed771a51da\";s:10:\"secret_key\";N;s:16:\"parent_plugin_id\";N;s:5:\"title\";s:23:\"WordPress Books Gallery\";s:4:\"slug\";s:16:\"wp-books-gallery\";s:12:\"premium_slug\";s:24:\"wp-books-gallery-premium\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:22:\"premium_releases_count\";N;s:4:\"file\";s:37:\"wp-books-gallery/wp-books-gallery.php\";s:7:\"version\";s:5:\"4.5.8\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:14:\"premium_suffix\";s:9:\"(Premium)\";s:7:\"is_live\";b:1;s:9:\"bundle_id\";N;s:17:\"bundle_public_key\";N;s:17:\"opt_in_moderation\";N;}}s:9:\"unique_id\";s:32:\"b0b2705852004da5417d217c2f770ddc\";}',
+        'a:5:{s:21:\"id_slug_type_path_map\";a:1:{i:8841;a:3:{s:4:\"slug\";s:16:\"wp-books-gallery\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:37:\"wp-books-gallery/wp-books-gallery.php\";}}s:11:\"plugin_data\";a:1:{s:16:\"wp-books-gallery\";a:16:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:37:\"wp-books-gallery/wp-books-gallery.php\";}s:20:\"is_network_activated\";b:0;s:17:\"install_timestamp\";i:1698107792;s:17:\"was_plugin_loaded\";b:1;s:21:\"is_plugin_new_install\";b:1;s:16:\"sdk_last_version\";N;s:11:\"sdk_version\";s:6:\"2.5.12\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";N;s:14:\"plugin_version\";s:5:\"4.5.8\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";N;s:4:\"host\";s:22:\"cloudbooks.onlab.click\";s:9:\"server_ip\";s:10:\"10.0.1.138\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1698107792;s:7:\"version\";s:5:\"4.5.8\";}s:15:\"prev_is_premium\";b:0;s:12:\"is_anonymous\";a:3:{s:2:\"is\";b:1;s:9:\"timestamp\";i:1698107800;s:7:\"version\";s:5:\"4.5.8\";}}}s:13:\"file_slug_map\";a:1:{s:37:\"wp-books-gallery/wp-books-gallery.php\";s:16:\"wp-books-gallery\";}s:7:\"plugins\";a:1:{s:16:\"wp-books-gallery\";O:9:\"FS_Plugin\":24:{s:2:\"id\";s:4:\"8841\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:0;s:10:\"public_key\";s:32:\"pk_0a8ec2eb28cd4919f2bed771a51da\";s:10:\"secret_key\";N;s:16:\"parent_plugin_id\";N;s:5:\"title\";s:23:\"WordPress Books Gallery\";s:4:\"slug\";s:16:\"wp-books-gallery\";s:12:\"premium_slug\";s:24:\"wp-books-gallery-premium\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:22:\"premium_releases_count\";N;s:4:\"file\";s:37:\"wp-books-gallery/wp-books-gallery.php\";s:7:\"version\";s:5:\"4.5.8\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:14:\"premium_suffix\";s:9:\"(Premium)\";s:7:\"is_live\";b:1;s:9:\"bundle_id\";N;s:17:\"bundle_public_key\";N;s:17:\"opt_in_moderation\";N;}}s:9:\"unique_id\";s:32:\"b0b2705852004da5417d217c2f770ddc\";}',
         'yes'
     );
 
@@ -1592,7 +1592,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `post_id` (`post_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 425 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 425 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -1614,9 +1614,7 @@ VALUES (
         'default'
     );
 
-INSERT INTO
-    `SERVMASK_PREFIX_postmeta`
-VALUES (3, 6, '_edit_last', '1');
+INSERT INTO `SERVMASK_PREFIX_postmeta` VALUES (3, 6, '_edit_last', '1');
 
 INSERT INTO
     `SERVMASK_PREFIX_postmeta`
@@ -2577,9 +2575,7 @@ VALUES (
         '1698284489'
     );
 
-INSERT INTO
-    `SERVMASK_PREFIX_postmeta`
-VALUES (335, 2, 'footnotes', '');
+INSERT INTO `SERVMASK_PREFIX_postmeta` VALUES (335, 2, 'footnotes', '');
 
 INSERT INTO
     `SERVMASK_PREFIX_postmeta`
@@ -2782,7 +2778,7 @@ CREATE TABLE
         ),
         KEY `post_parent` (`post_parent`),
         KEY `post_author` (`post_author`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 68 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 68 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -2807,7 +2803,7 @@ VALUES (
         '2023-10-22 02:47:19',
         '',
         0,
-        'http://cloudbooks.store/?p=1',
+        'http://cloudbooks.onlab.click/?p=1',
         0,
         'post',
         '',
@@ -2835,7 +2831,7 @@ VALUES (
         '2023-10-26 22:56:31',
         '',
         0,
-        'http://cloudbooks.store/?page_id=2',
+        'http://cloudbooks.onlab.click/?page_id=2',
         0,
         'page',
         '',
@@ -2863,7 +2859,7 @@ VALUES (
         '2023-10-27 21:24:26',
         '',
         0,
-        'http://cloudbooks.store/?page_id=3',
+        'http://cloudbooks.onlab.click/?page_id=3',
         0,
         'page',
         '',
@@ -2891,7 +2887,7 @@ VALUES (
         '2023-10-22 02:47:19',
         '',
         0,
-        'http://cloudbooks.store/2023/10/21/navigation/',
+        'http://cloudbooks.onlab.click/2023/10/21/navigation/',
         0,
         'wp_navigation',
         '',
@@ -2919,7 +2915,7 @@ VALUES (
         '0000-00-00 00:00:00',
         '',
         0,
-        'http://cloudbooks.store/?p=5',
+        'http://cloudbooks.onlab.click/?p=5',
         0,
         'post',
         '',
@@ -2947,7 +2943,7 @@ VALUES (
         '2023-10-24 00:48:49',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=6',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=6',
         0,
         'books',
         '',
@@ -2975,7 +2971,7 @@ VALUES (
         '2023-10-24 00:48:22',
         '',
         6,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/a_arte_da_guerra_.jpg',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/a_arte_da_guerra_.jpg',
         0,
         'attachment',
         'image/jpeg',
@@ -3003,7 +2999,7 @@ VALUES (
         '2023-10-24 00:56:37',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=8',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=8',
         0,
         'books',
         '',
@@ -3031,7 +3027,7 @@ VALUES (
         '2023-10-24 00:56:28',
         '',
         8,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/alice_no_pais_das_maravilhas.jpg',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/alice_no_pais_das_maravilhas.jpg',
         0,
         'attachment',
         'image/jpeg',
@@ -3059,7 +3055,7 @@ VALUES (
         '2023-10-24 01:02:51',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=10',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=10',
         0,
         'books',
         '',
@@ -3087,7 +3083,7 @@ VALUES (
         '2023-10-24 01:02:42',
         '',
         10,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/500_comandos_linux.png',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/500_comandos_linux.png',
         0,
         'attachment',
         'image/png',
@@ -3115,7 +3111,7 @@ VALUES (
         '2023-10-24 01:23:13',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=12',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=12',
         0,
         'books',
         '',
@@ -3143,7 +3139,7 @@ VALUES (
         '2023-10-24 01:22:57',
         '',
         12,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/bg1.png',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/bg1.png',
         0,
         'attachment',
         'image/png',
@@ -3171,7 +3167,7 @@ VALUES (
         '2023-10-24 01:30:02',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=14',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=14',
         0,
         'books',
         '',
@@ -3199,7 +3195,7 @@ VALUES (
         '2023-10-24 01:29:49',
         '',
         14,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/historia_das_americas.png',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/historia_das_americas.png',
         0,
         'attachment',
         'image/png',
@@ -3227,7 +3223,7 @@ VALUES (
         '2023-10-24 01:43:00',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=16',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=16',
         0,
         'books',
         '',
@@ -3255,7 +3251,7 @@ VALUES (
         '2023-10-24 01:42:35',
         '',
         16,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/o_saci.jpg',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/o_saci.jpg',
         0,
         'attachment',
         'image/jpeg',
@@ -3283,7 +3279,7 @@ VALUES (
         '2023-10-24 01:47:30',
         '',
         0,
-        'http://cloudbooks.store/2023/10/23/wp-global-styles-twentytwentythree/',
+        'http://cloudbooks.onlab.click/2023/10/23/wp-global-styles-twentytwentythree/',
         0,
         'wp_global_styles',
         '',
@@ -3311,7 +3307,7 @@ VALUES (
         '2023-10-26 00:55:16',
         '',
         0,
-        'http://cloudbooks.store/?p=19',
+        'http://cloudbooks.onlab.click/?p=19',
         0,
         'customize_changeset',
         '',
@@ -3339,7 +3335,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/logo/',
+        'http://cloudbooks.onlab.click/logo/',
         0,
         'attachment',
         'image/png',
@@ -3367,7 +3363,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/blog-1/',
+        'http://cloudbooks.onlab.click/blog-1/',
         0,
         'attachment',
         'image/jpeg',
@@ -3395,7 +3391,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/blog-2/',
+        'http://cloudbooks.onlab.click/blog-2/',
         0,
         'attachment',
         'image/jpeg',
@@ -3423,7 +3419,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/blog-3/',
+        'http://cloudbooks.onlab.click/blog-3/',
         0,
         'attachment',
         'image/jpeg',
@@ -3451,7 +3447,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-1/',
+        'http://cloudbooks.onlab.click/product-1/',
         0,
         'attachment',
         'image/jpeg',
@@ -3479,7 +3475,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-2/',
+        'http://cloudbooks.onlab.click/product-2/',
         0,
         'attachment',
         'image/jpeg',
@@ -3507,7 +3503,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-3/',
+        'http://cloudbooks.onlab.click/product-3/',
         0,
         'attachment',
         'image/jpeg',
@@ -3535,7 +3531,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-4/',
+        'http://cloudbooks.onlab.click/product-4/',
         0,
         'attachment',
         'image/jpeg',
@@ -3563,7 +3559,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-5/',
+        'http://cloudbooks.onlab.click/product-5/',
         0,
         'attachment',
         'image/jpeg',
@@ -3591,7 +3587,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-6/',
+        'http://cloudbooks.onlab.click/product-6/',
         0,
         'attachment',
         'image/jpeg',
@@ -3619,7 +3615,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-7/',
+        'http://cloudbooks.onlab.click/product-7/',
         0,
         'attachment',
         'image/jpeg',
@@ -3647,7 +3643,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/product-8/',
+        'http://cloudbooks.onlab.click/product-8/',
         0,
         'attachment',
         'image/jpeg',
@@ -3675,7 +3671,7 @@ VALUES (
         '2023-10-26 01:16:46',
         '',
         0,
-        'http://cloudbooks.store/?page_id=32',
+        'http://cloudbooks.onlab.click/?page_id=32',
         0,
         'page',
         '',
@@ -3703,7 +3699,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/cooking-healthful-joyful/',
+        'http://cloudbooks.onlab.click/2023/10/25/cooking-healthful-joyful/',
         0,
         'post',
         '',
@@ -3731,7 +3727,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/clothing-blog-section-contains/',
+        'http://cloudbooks.onlab.click/2023/10/25/clothing-blog-section-contains/',
         0,
         'post',
         '',
@@ -3759,7 +3755,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/how-to-have-more-focused/',
+        'http://cloudbooks.onlab.click/2023/10/25/how-to-have-more-focused/',
         0,
         'post',
         '',
@@ -3787,7 +3783,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=36',
+        'http://cloudbooks.onlab.click/?p=36',
         0,
         'product',
         '',
@@ -3815,7 +3811,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=37',
+        'http://cloudbooks.onlab.click/?p=37',
         0,
         'product',
         '',
@@ -3843,7 +3839,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=38',
+        'http://cloudbooks.onlab.click/?p=38',
         0,
         'product',
         '',
@@ -3871,7 +3867,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=39',
+        'http://cloudbooks.onlab.click/?p=39',
         0,
         'product',
         '',
@@ -3899,7 +3895,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=40',
+        'http://cloudbooks.onlab.click/?p=40',
         0,
         'product',
         '',
@@ -3927,7 +3923,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=41',
+        'http://cloudbooks.onlab.click/?p=41',
         0,
         'product',
         '',
@@ -3955,7 +3951,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=42',
+        'http://cloudbooks.onlab.click/?p=42',
         0,
         'product',
         '',
@@ -3983,7 +3979,7 @@ VALUES (
         '2023-10-26 00:53:33',
         '',
         0,
-        'http://cloudbooks.store/?p=43',
+        'http://cloudbooks.onlab.click/?p=43',
         0,
         'product',
         '',
@@ -4011,7 +4007,7 @@ VALUES (
         '2023-10-26 00:58:30',
         '',
         32,
-        'http://cloudbooks.store/?p=44',
+        'http://cloudbooks.onlab.click/?p=44',
         0,
         'revision',
         '',
@@ -4039,7 +4035,7 @@ VALUES (
         '2023-10-26 01:00:01',
         '',
         32,
-        'http://cloudbooks.store/?p=45',
+        'http://cloudbooks.onlab.click/?p=45',
         0,
         'revision',
         '',
@@ -4067,7 +4063,7 @@ VALUES (
         '2023-10-26 01:02:01',
         '',
         32,
-        'http://cloudbooks.store/?p=46',
+        'http://cloudbooks.onlab.click/?p=46',
         0,
         'revision',
         '',
@@ -4095,7 +4091,7 @@ VALUES (
         '2023-10-26 01:03:24',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/6502a050-6bbf-46b2-a2aa-84d4200b9961/',
+        'http://cloudbooks.onlab.click/2023/10/25/6502a050-6bbf-46b2-a2aa-84d4200b9961/',
         0,
         'customize_changeset',
         '',
@@ -4123,7 +4119,7 @@ VALUES (
         '2023-10-26 01:04:03',
         '',
         0,
-        'http://cloudbooks.store/?p=48',
+        'http://cloudbooks.onlab.click/?p=48',
         0,
         'customize_changeset',
         '',
@@ -4151,7 +4147,7 @@ VALUES (
         '2023-10-26 01:05:54',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/3aeaf106-3785-4c32-a875-35a45142864d/',
+        'http://cloudbooks.onlab.click/2023/10/25/3aeaf106-3785-4c32-a875-35a45142864d/',
         0,
         'customize_changeset',
         '',
@@ -4179,7 +4175,7 @@ VALUES (
         '2023-10-26 01:06:00',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/82283338-cffd-4e77-95d7-2bcef751b0a5/',
+        'http://cloudbooks.onlab.click/2023/10/25/82283338-cffd-4e77-95d7-2bcef751b0a5/',
         0,
         'customize_changeset',
         '',
@@ -4207,7 +4203,7 @@ VALUES (
         '2023-10-26 01:06:15',
         '',
         0,
-        'http://cloudbooks.store/?p=51',
+        'http://cloudbooks.onlab.click/?p=51',
         0,
         'customize_changeset',
         '',
@@ -4235,7 +4231,7 @@ VALUES (
         '2023-10-26 01:14:03',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/d15bc7ae-1ccb-4be3-9bab-30d865e36d81/',
+        'http://cloudbooks.onlab.click/2023/10/25/d15bc7ae-1ccb-4be3-9bab-30d865e36d81/',
         0,
         'customize_changeset',
         '',
@@ -4263,7 +4259,7 @@ VALUES (
         '2023-10-26 01:18:49',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/98bd4c2d-cf9f-48fd-a95d-0e0afee36130/',
+        'http://cloudbooks.onlab.click/2023/10/25/98bd4c2d-cf9f-48fd-a95d-0e0afee36130/',
         0,
         'customize_changeset',
         '',
@@ -4291,7 +4287,7 @@ VALUES (
         '2023-10-26 01:21:39',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/4d6fc6ad-9f3d-49b6-8a98-32255ae026b2/',
+        'http://cloudbooks.onlab.click/2023/10/25/4d6fc6ad-9f3d-49b6-8a98-32255ae026b2/',
         0,
         'customize_changeset',
         '',
@@ -4319,7 +4315,7 @@ VALUES (
         '2023-10-26 01:33:57',
         '',
         0,
-        'http://cloudbooks.store/?p=55',
+        'http://cloudbooks.onlab.click/?p=55',
         0,
         'customize_changeset',
         '',
@@ -4347,7 +4343,7 @@ VALUES (
         '2023-10-26 01:41:29',
         '',
         0,
-        'http://cloudbooks.store/2023/10/25/ecommerce-bookshop/',
+        'http://cloudbooks.onlab.click/2023/10/25/ecommerce-bookshop/',
         0,
         'custom_css',
         '',
@@ -4375,7 +4371,7 @@ VALUES (
         '2023-10-26 01:33:57',
         '',
         56,
-        'http://cloudbooks.store/?p=57',
+        'http://cloudbooks.onlab.click/?p=57',
         0,
         'revision',
         '',
@@ -4403,7 +4399,7 @@ VALUES (
         '2023-10-26 01:41:29',
         '',
         0,
-        'http://cloudbooks.store/?p=58',
+        'http://cloudbooks.onlab.click/?p=58',
         0,
         'customize_changeset',
         '',
@@ -4431,7 +4427,7 @@ VALUES (
         '2023-10-26 01:41:29',
         '',
         56,
-        'http://cloudbooks.store/?p=59',
+        'http://cloudbooks.onlab.click/?p=59',
         0,
         'revision',
         '',
@@ -4459,7 +4455,7 @@ VALUES (
         '2023-10-26 22:53:29',
         '',
         2,
-        'http://cloudbooks.store/?p=60',
+        'http://cloudbooks.onlab.click/?p=60',
         0,
         'revision',
         '',
@@ -4487,7 +4483,7 @@ VALUES (
         '2023-10-26 22:56:31',
         '',
         2,
-        'http://cloudbooks.store/?p=61',
+        'http://cloudbooks.onlab.click/?p=61',
         0,
         'revision',
         '',
@@ -4515,7 +4511,7 @@ VALUES (
         '2023-10-27 21:23:59',
         '',
         3,
-        'http://cloudbooks.store/?p=62',
+        'http://cloudbooks.onlab.click/?p=62',
         0,
         'revision',
         '',
@@ -4543,7 +4539,7 @@ VALUES (
         '2023-10-27 21:24:26',
         '',
         3,
-        'http://cloudbooks.store/?p=63',
+        'http://cloudbooks.onlab.click/?p=63',
         0,
         'revision',
         '',
@@ -4571,7 +4567,7 @@ VALUES (
         '2023-10-29 14:57:56',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=64',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=64',
         0,
         'books',
         '',
@@ -4599,7 +4595,7 @@ VALUES (
         '2023-10-29 14:57:10',
         '',
         64,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/o_alienista.jpg',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/o_alienista.jpg',
         0,
         'attachment',
         'image/jpeg',
@@ -4627,7 +4623,7 @@ VALUES (
         '2023-10-29 15:01:21',
         '',
         0,
-        'http://cloudbooks.store/?post_type=books&#038;p=66',
+        'http://cloudbooks.onlab.click/?post_type=books&#038;p=66',
         0,
         'books',
         '',
@@ -4655,7 +4651,7 @@ VALUES (
         '2023-10-29 15:01:11',
         '',
         66,
-        'http://cloudbooks.store/wp-content/uploads/2023/10/robotica.png',
+        'http://cloudbooks.onlab.click/wp-content/uploads/2023/10/robotica.png',
         0,
         'attachment',
         'image/png',
@@ -4676,7 +4672,7 @@ CREATE TABLE
             `term_taxonomy_id`
         ),
         KEY `term_taxonomy_id` (`term_taxonomy_id`)
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4735,7 +4731,7 @@ CREATE TABLE
         PRIMARY KEY (`term_taxonomy_id`),
         UNIQUE KEY `term_id_taxonomy` (`term_id`, `taxonomy`),
         KEY `taxonomy` (`taxonomy`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4829,7 +4825,7 @@ CREATE TABLE
         PRIMARY KEY (`meta_id`),
         KEY `term_id` (`term_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 DROP TABLE IF EXISTS `SERVMASK_PREFIX_terms`;
 
@@ -4842,7 +4838,7 @@ CREATE TABLE
         PRIMARY KEY (`term_id`),
         KEY `slug` (`slug`(191)),
         KEY `name` (`name`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4913,9 +4909,7 @@ VALUES (
         0
     );
 
-INSERT INTO
-    `SERVMASK_PREFIX_terms`
-VALUES (9, 'Fashion', 'fashion', 0);
+INSERT INTO `SERVMASK_PREFIX_terms` VALUES (9, 'Fashion', 'fashion', 0);
 
 INSERT INTO
     `SERVMASK_PREFIX_terms`
@@ -4950,7 +4944,7 @@ CREATE TABLE
         PRIMARY KEY (`umeta_id`),
         KEY `user_id` (`user_id`),
         KEY `meta_key` (`meta_key`(191))
-    ) ENGINE = InnoDB AUTO_INCREMENT = 23 DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 23 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
 
 START TRANSACTION;
 
@@ -4958,17 +4952,11 @@ INSERT INTO
     `SERVMASK_PREFIX_usermeta`
 VALUES (1, 1, 'nickname', 'admin');
 
-INSERT INTO
-    `SERVMASK_PREFIX_usermeta`
-VALUES (2, 1, 'first_name', '');
+INSERT INTO `SERVMASK_PREFIX_usermeta` VALUES (2, 1, 'first_name', '');
 
-INSERT INTO
-    `SERVMASK_PREFIX_usermeta`
-VALUES (3, 1, 'last_name', '');
+INSERT INTO `SERVMASK_PREFIX_usermeta` VALUES (3, 1, 'last_name', '');
 
-INSERT INTO
-    `SERVMASK_PREFIX_usermeta`
-VALUES (4, 1, 'description', '');
+INSERT INTO `SERVMASK_PREFIX_usermeta` VALUES (4, 1, 'description', '');
 
 INSERT INTO
     `SERVMASK_PREFIX_usermeta`
@@ -4997,3 +4985,145 @@ INSERT INTO
 VALUES (8, 1, 'admin_color', 'fresh');
 
 INSERT INTO `SERVMASK_PREFIX_usermeta` VALUES (9, 1, 'use_ssl', '0');
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        10,
+        1,
+        'show_admin_bar_front',
+        'true'
+    );
+
+INSERT INTO `SERVMASK_PREFIX_usermeta` VALUES (11, 1, 'locale', '');
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        12,
+        1,
+        'SERVMASK_PREFIX_capabilities',
+        'a:1:{s:13:\"administrator\";b:1;}'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        13,
+        1,
+        'SERVMASK_PREFIX_user_level',
+        '10'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        14,
+        1,
+        'dismissed_wp_pointers',
+        ''
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        15,
+        1,
+        'show_welcome_panel',
+        '1'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        17,
+        1,
+        'SERVMASK_PREFIX_dashboard_quick_press_last_post_id',
+        '5'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        18,
+        1,
+        'community-events-location',
+        'a:1:{s:2:\"ip\";s:12:\"186.235.99.0\";}'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        19,
+        1,
+        'SERVMASK_PREFIX_user-settings',
+        'libraryContent=browse'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        20,
+        1,
+        'SERVMASK_PREFIX_user-settings-time',
+        '1698108524'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        21,
+        1,
+        'SERVMASK_PREFIX_persisted_preferences',
+        'a:3:{s:14:\"core/edit-post\";a:2:{s:26:\"isComplementaryAreaVisible\";b:1;s:12:\"welcomeGuide\";b:0;}s:9:\"_modified\";s:24:\"2023-10-26T01:07:15.470Z\";s:22:\"core/customize-widgets\";a:1:{s:12:\"welcomeGuide\";b:0;}}'
+    );
+
+INSERT INTO
+    `SERVMASK_PREFIX_usermeta`
+VALUES (
+        22,
+        1,
+        'session_tokens',
+        'a:1:{s:64:\"a40440f1c3c3dc065d906adc6c7f30101a131c06f1cda41e6e3ccacf8ef29e87\";a:4:{s:10:\"expiration\";i:1698764059;s:2:\"ip\";s:14:\"186.235.99.186\";s:2:\"ua\";s:101:\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\";s:5:\"login\";i:1698591259;}}'
+    );
+
+COMMIT;
+
+DROP TABLE IF EXISTS `SERVMASK_PREFIX_users`;
+
+CREATE TABLE
+    `SERVMASK_PREFIX_users` (
+        `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+        `user_login` varchar(60) NOT NULL DEFAULT '',
+        `user_pass` varchar(255) NOT NULL DEFAULT '',
+        `user_nicename` varchar(50) NOT NULL DEFAULT '',
+        `user_email` varchar(100) NOT NULL DEFAULT '',
+        `user_url` varchar(100) NOT NULL DEFAULT '',
+        `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+        `user_activation_key` varchar(255) NOT NULL DEFAULT '',
+        `user_status` int(11) NOT NULL DEFAULT 0,
+        `display_name` varchar(250) NOT NULL DEFAULT '',
+        PRIMARY KEY (`ID`),
+        KEY `user_login_key` (`user_login`),
+        KEY `user_nicename` (`user_nicename`),
+        KEY `user_email` (`user_email`)
+    ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+
+START TRANSACTION;
+
+INSERT INTO
+    `SERVMASK_PREFIX_users`
+VALUES (
+        1,
+        'admin',
+        '$P$BA672OfDDAfbl97/aktEuavYkr3OAX/',
+        'admin',
+        'dev.isaque21@gmail.com',
+        'http://cloudbooks.onlab.click',
+        '2023-10-22 02:47:19',
+        '',
+        0,
+        'admin'
+    );
+
+COMMIT;
