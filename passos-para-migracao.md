@@ -47,3 +47,12 @@
 - instalar dependencias necessárias que a documentação do wordpress pede
 `sudo apt update`
 `sudo apt install nginx php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc`
+- Adicionar configurações mínimas ao PHP
+´sudo nano /etc/php/8.1/fpm/php.ini`
+- Editar valores 
+cgi.fix_pathinfo=0
+upload_max_filesize = 128M
+post_max_size = 128M
+memory_limit = 512M
+max_execution_time = 120
+- 
